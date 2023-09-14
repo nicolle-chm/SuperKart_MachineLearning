@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>superkart_calculator</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Predict the next quarter sales of SuperKart</h1><br>
+    <h3>- Complete the blank spaces in the required units. <br>- For Y/N answers, put a 1 if applies and a 0 if doesn't apply <br>- You can only press calculate when all blank spaces are filled </h3><br>
+
+    
+    <div class="wrapper">
+
+        <div class="text">Product Weight (gr): </div> 
+        <div class="input-wrapper">
+     <input type="text" id="num1">
+        </div>
+        <br><br>    
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text"> Radio of Allocated Area: </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num2">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+
+        <div class="text">Max Retail Price: ($) </div> 
+        <div class="input-wrapper">
+     <input type="text" id="num3">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Sugar content - No sugar: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num4">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Sugar content - Regular: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num5">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Sugar content - Low Sugar: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num19">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+
+        <div class="text">Store size - Big: (Y/N) </div> 
+        <div class="input-wrapper">
+     <input type="text" id="num18">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+
+        <div class="text">Store size -Medium: (Y/N) </div> 
+        <div class="input-wrapper">
+     <input type="text" id="num6">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Store size -Small: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num7">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Store Location - Tier 2: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num8">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+
+        <div class="text">Store Location - Tier 2: (Y/N) </div> 
+        <div class="input-wrapper">
+     <input type="text" id="num9">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+
+        <div class="text">Store Location - Tier 3: (Y/N) </div> 
+        <div class="input-wrapper">
+     <input type="text" id="num17">
+        </div>
+        <br><br> 
+    </div>
+
+
+    <div class="wrapper">
+        
+        <div class="text">Store Type -Food Mart: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num10">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Store Type 1: (Y/N)  </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num11">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Store Type 2: (Y/N)  </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num12">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Store Type - Department Store: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num14">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Non Consumable Product:(Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num13">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Food Related Product: (Y/N)  </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num15">
+        </div>
+        <br><br> 
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="text">Drink Related Product: (Y/N) </div> 
+        <div class="input-wrapper">
+    <input type="text" id="num16">
+        </div> 
+    </div>
+
+
+    <button onclick="calculate()">Calculate</button>
+    <h2 id="answer"></h2>
+</div>
+
+
+
+<script>
+
+function calculate()
+{
+    var field1=document.getElementById("num1").value;
+    var field2=document.getElementById("num2").value;
+    var field3=document.getElementById("num3").value;
+    var field4=document.getElementById("num4").value;
+    var field5=document.getElementById("num5").value;
+    var field6=document.getElementById("num6").value;
+    var field7=document.getElementById("num7").value;
+    var field8=document.getElementById("num8").value;
+    var field9=document.getElementById("num9").value;
+    var field10=document.getElementById("num10").value;
+    var field11=document.getElementById("num11").value;
+    var field12=document.getElementById("num12").value;
+    var field13=document.getElementById("num13").value;
+    var field14=document.getElementById("num14").value;
+    var field15=document.getElementById("num15").value;
+    var field16=document.getElementById("num16").value;
+    var field17=document.getElementById("num17").value;
+    var field18=document.getElementById("num18").value;
+    var field19=document.getElementById("num19").value;
+
+
+    var result=179.0666+135.0918*parseFloat(field1)-140.3752*parseFloat(field2)+12.8703*parseFloat(field3)+14.1944*parseFloat(field4)+30.7219*parseFloat(field5)+395.6741*parseFloat(field6)-382.7595*parseFloat(field7)-307.8490*parseFloat(field8)-382.7595*parseFloat(field9)-382.7595*parseFloat(field10)-166.1521*parseFloat(field11)-474.0011*parseFloat(field12)+14.1944*parseFloat(field13)+0*parseFloat(field14)+0*parseFloat(field15)+0*parseFloat(field16)+0*parseFloat(field17)+0*parseFloat(field18)+0*parseFloat(field19);
+
+    if(!isNaN(result))
+    {
+        document.getElementById("answer").innerHTML= "SuperKart next quarter sales prediction: $" + result.toFixed(2);
+    }
+}
+
+</script>
+</body>
+</html>
